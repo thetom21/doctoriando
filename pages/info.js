@@ -5,51 +5,46 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Doctoriando</title>
+        <title>Doctoriando Bibliografia</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Bienvenido <a href="/info">Doctoriando</a>
+         Informacion sobre  
         </h1>
 
-        <p className={styles.title}>
-          Que desea relizar?{' '}
+        <p className={styles.description}>
+          Get started by editing{' '}
+          <code className={styles.code}>pages/index.js</code>
         </p>
-        <code className={styles.code}></code>
 
         <div className={styles.grid}>
-          <a href="/realizar" className={styles.card}>
-            <h3>Realizar Cita &rarr;</h3>
-            <p>Si no tiene ninguna cita pautada con el doctor aqui
-              puede Realizar su cita.
-            </p>
+          <a href="https://nextjs.org/docs" className={styles.card}>
+            <h3>Documentation &rarr;</h3>
+            <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
-          <a href="/modificar" className={styles.card}>
-            <h3>Modificar Cita &rarr;</h3>
-            <p>Si ya Tiene alguna cita pautada aqui podra modificar la
-              fecha de la cita.
-            </p>
+          <a href="https://nextjs.org/learn" className={styles.card}>
+            <h3>Learn &rarr;</h3>
+            <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
 
           <a
-            href="/cancelar"
+            href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
           >
-            <h3>Cancelacion De Cita &rarr;</h3>
-            <p>Si ya tiene una cita pautada y desea Cancelar,dando la razon de 
-              porque desea Realizarla.</p>
+            <h3>Examples &rarr;</h3>
+            <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a>
 
           <a
-            href="/visualizacion"
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
           >
-            <h3>Visualizar Citas Anteriores &rarr;</h3>
+            <h3>Deploy &rarr;</h3>
             <p>
-              Para ver las citas anteriores que a tenido con el doctor. 
+              Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
         </div>
