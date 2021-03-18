@@ -1,11 +1,19 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import React, { useState } from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+import TimePicker from 'rc-time-picker';
+import ReactDOM from 'react-dom';
+import 'rc-time-picker/assets/index.css';
 
 export default function Home() {
+  const [value, onChange] = useState(new Date());
+  const save = () => alert("usted selecciono" + value.toString());
   return (
     <div className={styles.container}>
       <Head>
-        <title>Doctoriando Bibliografia</title>
+        <title>Modificacion</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -18,35 +26,23 @@ export default function Home() {
           selecione la fecha que sea para que la cita sea modificada{' '}
         </p>
 
-         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <Calendar
+        onChange={onChange}
+        value={value}
+        minDate={new Date()}
+      />
+        <TimePicker
+        showSecond={false} 
+        use12Hours={true}
+        placeholder={"selecione la hora"}
+        allowEmpty={false}
+        minuteStep={30}
+        />
+        
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+      <button onClick={save} >Guardar</button>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+         
       </main>
 
       

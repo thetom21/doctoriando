@@ -15,25 +15,13 @@ export default function Home() {
         </h1>
 
         <p className={styles.title}>
-          {' '}
+          Login{' '}
         </p>
         <code className={styles.code}></code>
-        <p className={styles.type}>si ya tiene una cuenta 
-          {' '}
-        </p>
-        <a className={styles.card}
-        
-        href="/login">Login</a>
-
-         <p className={styles.type}>si no tiene cuenta
-          {' '}
-          </p>
-
-         <a className={styles.card}
-         
-        href="/registrarse">Registrate</a>
-        
-
+        <input type="text" placeholder="Email"></input>
+        <input type="password" placeholder="Contrasena"></input>
+        <a 
+        href="/home">entrar</a>
       
 
        </main>

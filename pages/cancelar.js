@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const save = () => alert("usted a cancelado la cita" + value.toString());
   return (
     <div className={styles.container}>
       <Head>
@@ -18,35 +19,24 @@ export default function Home() {
           Cancele su cita , diganos el motivo.{' '}
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+        
+        <a  className={styles.card}>
+            <p>su cita estaba prevista para </p>
+            <p>12/2/2021 a las 2:00 pm</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <label >Motivo:</label>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <textarea rows="10" cols="70">
+            Porfavor diganos porque desea cancelar.
+          </textarea>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+         
+         <button onClick={save} >Guardar</button>
+
+
+
+        
       </main>
 
       
