@@ -8,12 +8,20 @@
     "start": "next start"
   },
   "dependencies": {
+    "firebase": "^8.3.1",
+    "firebase-admin": "^9.5.0",
     "fullcalendar": "^5.5.1",
     "next": "10.0.6",
+    "nookies": "^2.5.2",
     "rc-time-picker": "^3.7.3",
     "react": "17.0.1",
     "react-calendar": "^3.3.1",
     "react-dom": "17.0.1",
     "time-selector": "^1.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "tailwindcss": "^2.0.4"
   }
 }

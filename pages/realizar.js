@@ -45,9 +45,12 @@ export default function Home() {
         <button onClick={save} >Guardar</button>
 
      </main> 
-    
-
-      
+     <footer className={styles.footer}>
+          Creados por Ingenieros de la PUCMM
+           <br></br>
+          Asignado por el profesor Jose Luis Alonso Ochoa
+          <img className={styles.logo} />
+      </footer>
     </div>
   )
 }
